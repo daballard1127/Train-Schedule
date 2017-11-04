@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HOME | Train Scheduler DB</title>
+	<!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Bootswatch Styling for Improving the Aesthetics -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/cerulean/bootstrap.min.css">
+
+	
+
+	<link rel="stylesheet" type="text/css" href="assets/css/styletrain.css">
+
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
+
+	<!-- Link to Moment.js should go here -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+</head>
+<body>
+<div class="container">
+	<div class="jumbotron text-center" >
+		<h1>Ballard Train Schedule</h1>
+		</div>
+	</div>
+
+	<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Current Train schedule</h3>
+  </div>
+  
+  <table class="table table-hover" id="trainTable" >
+  	<thead >
+  <tr>
+    <th>TrainName</th>
+    <th>Destination</th> 
+    <th>Frequency(min)</th>
+    <th>Next Arrival</th>
+    <th>Minutes Away</th>
+  </tr>
+  </thead>
+  <tbody>
+  	
+  </tbody>
+</table>
+<!-- <div class="panel-body">
+    Panel content
+   </div> -->
+</div>
+
+<!-- Add Train  -->
+			<div class="panel panel">
+				<div class="panel-heading">
+					<h3 class="panel-title"><strong>Add Train</strong></h3>
+				</div>
+				<div class="panel-body">
+	
+
+				<!-- Entry Form -->
+				<form>
+					<div class="form-group">
+						<label for="">Train Name</label>
+						<input type="text" class="form-control" id="trainNameInput">
+					</div>
+
+					<div class="form-group">
+						<label for="">Destination</label>
+						<input type="text" class="form-control" id="destInput">
+					</div>
+
+					<div class="form-group">
+						<label for="">First Train Time (HH:mm military time)</label>
+						<input type="text" class="form-control" id="firstTrainInput">
+					</div>
+
+					<div class="form-group">
+						<label for="">Frequency (min)</label>
+						<input type="text" class="form-control" id="freqInput">
+					</div>
+					
+					<button type="submit" class="btn btn" id="addTrainBtn">Submit</button>
+				</form>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+
+
+	<!-- Create  table to store and display the train information -->
+	
+
+
+		
+	
+
+	
+
+	
+<script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
+
+	<script src="assets/javascript/trainsch.js"></script>
+</body>
+</html>
